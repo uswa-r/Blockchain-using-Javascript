@@ -50,7 +50,7 @@ class blockChain { //we'll here again give it a constructor:
         return this.chain[this.chain.length - 1]; //to return its last element, we've used .length here with -1.
     }
     //-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-    //addBlock method will receive a new block:
+    //addBlock method will receive a new block or let's say: connects to previous block, make a new chain to connect to the latest block:
     addBlock(newBlock) {
         //now the addBlock method will generate new blocks but it'll require the previousHash to get data from, hence we're using previousHash below to continue the formation of blockchain:
         newBlock.previousHash = this.getLatestBlock().hash; //since new/latest block formation requires previous block's data, hence we used previousHash but to put this previous hash-data into latest/new block we have to use latestBlock method, and .hash to tell our method that we need a new hash ID formation not the whole data.
