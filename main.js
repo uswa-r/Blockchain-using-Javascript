@@ -33,12 +33,12 @@ class block { //WE'LL BEGIN BY MAKING A CLASS OF BLOCK:
 //NOW WE'RE CREATING A CLASS FOR BLOCKCHAIN:
 class blockChain { //we'll here again give it a constructor:
     constructor() { //this constructor will be responsible for initializing our blockchain, hence we'll give a property "chain" in this class which will be an array of blocks.
-        this.chain = [];
+        this.chain = [this.createGenesisBlock]; //after providing info in the below createGenesisBlock we declared that func on Ln39 in this.chain property, hence it could have the info to put into set of arrays.
         //NOW THE 1ST BLOCK ON THE BLOCKCHAIN IS CALLED A GENESIS BLOCK, WHICH WE'LL BE CREATING MANUALLY, HENCE WE'LL MAKE ANOTHER METHOD FOR IT, IN THIS CLASS, OUTSIDE OF THIS CONSTRUCTOR:
     }
     createGenesisBlock(){//Genesis block will return new block:
         //we're gonna make new block in the block chain from the 1st block we created at Ln9 which is known as the Genesis Block.
-        return new block(0, "01/01/2022", "Account User: Uswa R. Balance: 1 Dodge Coin"); //it is the new block that 1st block "Genesis" will create in the blockchain. It contains property variables like index = 0, date = 01/01/2022
-
+        return new block(0, "01/01/2022", "Account User: Uswa R. Balance: 1 Dodge Coin", "0"); //it is the new block that 1st block "Genesis" will create in the blockchain. It contains property variables like index = 0, date (timeStamp) = 01/01/2022, data = could be anything, & previousHash = which doesn't exist hence could be any random number/data.
+        //AFTER ABOVE CODE LINE OR DECLARATION OF INPUT IN THE PARAMETERS, WE'LL HEAD UPWARDS TO OUR CONSTRUCTOR OF BLOCKCHAIN WHERE WE MADE A PROPERTY CALLED CHAIN, AND WE'LL DECLARE OUR ITS BELOW createGenesisBlock function/method, SO IT CAN HAVE THE DATA WE PROVIDED IN ITS ARRAY. 
     }
 }
