@@ -67,4 +67,4 @@ let uswaSBlockChain = new newBlockChain(); //here we made a variable and named i
 uswaSBlockChain.addBlock(new block(1, "02/01/2022", "Account User: Uswa R. Balance: 2 Dodge Coins", {amount: 5})); //now here we're giving the new block its details/info/data (index, timeStamp, previousHash, & data)
 uswaSBlockChain.addBlock(new block(2, "03/01/2022", "Account User: Uswa R. Balance: 3 Dodge Coins", {amount: 15})); //now here we're giving the new block its details/info/data (index, timeStamp, previousHash, & data)
 
-console.log(JSON.stringify);
+console.log(JSON.stringify(uswaSBlockChain, null, 4));
