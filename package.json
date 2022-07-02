@@ -1,0 +1,22 @@
+{
+  "name": "blockchain-using-javascript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uswa00111/Blockchain-using-Javascript.git"
+  },
+  "author": "Uswa R.",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/uswa00111/Blockchain-using-Javascript/issues"
+  },
+  "homepage": "https://github.com/uswa00111/Blockchain-using-Javascript#readme",
+  "dependencies": {
+    "crypto-js": "^4.1.1"
+  }
+}
