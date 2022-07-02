@@ -47,7 +47,7 @@ class blockChain { //we'll here again give it a constructor:
     //BELOW METHOD/FUNC WILL BE USEFUL FOR FUTURE:
     //getLatestBlock method will return the latest chain, hence we're giving this.chain property below:
     getLatestBlock(){
-        return this.chain[this.chain.length -1]; //to return its last element, we've used .length here with -1, to get it from 1 rather than 0.
+        return this.chain[this.chain.length -1]; //to return its last element, we've used .length here with -1.
     }
     //-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     //addBlock method will receive a new block:
