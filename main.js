@@ -65,13 +65,10 @@ class blockChain { //we'll here again give it a constructor:
 //NOW TO TEST ALL THE CODE WE WROTE ABOVE, WE'LL CREATE AN 'INSTANCE' OF OUR BLOCKCHAIN:
 //DEFINITION: An instance is an object containing data and behavior described by the class.
 //We are making new block here that will derive from the genesis block.
-let uswaSBlockChain = new blockChain(); //here we made a variable and named it uswaSBlockChain, then referred the variable to blockChain(Ln39) method, where the chain formation step takes place.
-uswaSBlockChain.addBlock(new block(1, "02/01/2022", {
-    amount: 5
-})); //now here we're giving the new block its details/info/data (index, timeStamp, previousHash, & data)
-uswaSBlockChain.addBlock(new block(2, "03/01/2022", {
-    amount: 15
-})); //now here we're giving the new block its details/info/data (index, timeStamp, previousHash, & data)
+let uswaSBlockChain = new blockChain(); //here we made a variable and named it uswaSBlockChain, then referred the variable to blockChain(Ln37) method, where the chain formation step takes place.
+uswaSBlockChain.addBlock(new block(1, "02/01/2022", {amount: 5})); //now here we're giving the new block its details/info/data (index, timeStamp, previousHash, & data), and referring it to the addBlock method.
+uswaSBlockChain.addBlock(new block(2, "03/01/2022", {amount: 15})); //now here we're giving the new block its details/info/data (index, timeStamp, previousHash, & data), and referring it to the addBlock func.
+//we made 2 new blocks, that will derive from the Genesis Block, thus there will be total 3 blocks of blockchain.
 //FORMATION OF NEW BLOCK IN THE BLOCKCHAIN ENDS HERE.
 //_____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
 console.log(uswaSBlockChain); //here we run it without JSON.Stringify to see in actual blockchain logic and visualization.
