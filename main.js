@@ -5,7 +5,7 @@
 //BELOW WE ARE IMPORTING SHA256 LIBRARY:
 const SHA256 = require('crypto-js/sha256');
 ///////////////////////////////////////////
-
+//CLASS block STARTS FROM HERE AND IT'LL INCLUDE THE CALCULATION OF BLOCK/GENESIS-BOCK/1ST-BLOCK AS WELL:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 class block { //WE'LL BEGIN BY MAKING A CLASS OF BLOCK:
     constructor( //IN A CONSTRUCTOR, WE'RE ADDING THE PROPERTIES OF A BLOCK WE NEED TO MAKE A BLOCKCHAIN:
         index, //index tells where the block sits on the chain: means its position on the chain. 
@@ -30,10 +30,11 @@ class block { //WE'LL BEGIN BY MAKING A CLASS OF BLOCK:
         //AFTER ABOVE CODE LINE, WE'LL GO BACK TO OUR HASH FUNCTION WE WROTE IN THE CONSTRUCTOR WITH NO PARAMETER. WE'LL DECLARE IT THIS CALC METHOD SO IT CAN GENERATE THE HASH NO.
     }
 }
+//CLASS block ENDS HERE AND CALCULATION SECTIONS AS WELL! //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //NOW WE'RE CREATING A CLASS FOR BLOCKCHAIN:
 class blockChain { //we'll here again give it a constructor:
     constructor() { //this constructor will be responsible for initializing our blockchain, hence we'll give a property "chain" in this class which will be an array of blocks.
-        this.chain = [this.createGenesisBlock]; //after providing info in the below createGenesisBlock we declared that func on Ln39 in this.chain property, hence it could have the info to put into set of arrays.
+        this.chain = [this.createGenesisBlock()]; //after providing info in the below createGenesisBlock we declared that func on Ln39 in this.chain property, hence it could have the info to put into set of arrays.
         //NOW THE 1ST BLOCK ON THE BLOCKCHAIN IS CALLED A GENESIS BLOCK, WHICH WE'LL BE CREATING MANUALLY, HENCE WE'LL MAKE ANOTHER METHOD FOR IT, IN THIS CLASS, OUTSIDE OF THIS CONSTRUCTOR:
     }
     createGenesisBlock(){//Genesis block will return new block:
