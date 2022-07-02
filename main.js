@@ -25,7 +25,7 @@ class block { //WE'LL BEGIN BY MAKING A CLASS OF BLOCK:
     //BEFORE CALCULATING, WE'LL NEED HASH FUNC/HASH-NUMBER, THAT WILL BE PROVIDED BY A LIBRARY CALLED crypto-js (npm). WE'LL INSTALL IT IN OUR CODE THROUGH TERMINAL TO GET THOSE HASH FUNCS.
     calculateHash() {
         //now we'll return here the sha256 hash of our properties:
-        //this.index + this.SoOn declares that this info/parameters are passing to the hash function & calculateHash function for the calculation. 
+        //this.index + this.SoOn declares that this info/parameters are passing to the hash function(20) & calculateHash(Ln26) function for the calculation. 
         return SHA256(this.index + this.timeStamp + this.previousHash + JSON.stringify(this.data)).toString(); //to make it look good like a database, we have used JSON.stringify, it'll make the data property look good like its in an array. and .toString will take the output of the sha256, and will cast it to a string, otherwise we'll get an object from the library we're using.
         //AFTER ABOVE CODE LINE, WE'LL GO BACK TO OUR HASH FUNCTION WE WROTE IN THE CONSTRUCTOR WITH NO PARAMETER. WE'LL DECLARE IT THIS CALC METHOD SO IT CAN GENERATE THE HASH NO.
     }
