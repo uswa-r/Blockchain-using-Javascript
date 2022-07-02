@@ -45,7 +45,7 @@ class blockChain { //we'll here again give it a constructor:
         //AFTER ABOVE CODE LINE OR DECLARATION OF INPUT IN THE PARAMETERS, WE'LL HEAD UPWARDS TO OUR CONSTRUCTOR OF BLOCKCHAIN WHERE WE MADE A PROPERTY CALLED CHAIN, AND WE'LL DECLARE OUR ITS BELOW createGenesisBlock function/method, SO IT CAN HAVE THE DATA WE PROVIDED IN ITS ARRAY. 
     }
     //BELOW METHOD/FUNC WILL BE USEFUL FOR FUTURE:
-    //getLatestBlock method will return the latest chain, hence we're giving this.chain property below:
+    //getLatestBlock method will make the latest chain, hence we're giving this.chain property below:
     getLatestBlock() {
         return this.chain[this.chain.length - 1]; //to return its last element, we've used .length here with -1.
     }
