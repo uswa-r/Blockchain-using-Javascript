@@ -12,7 +12,7 @@ class block { //WE'LL BEGIN BY MAKING A CLASS OF BLOCK:
         timeStamp, //timeStamp tell the time when the block was created: means its date of creation.
         data, //data could contain any type of information e.g; in case of currency--it can contain details of transaction, sender, & receiver.
         previousHash = '' //previousHash contains the string (unique ID) of the block, that insures the integrity of the blockchain, otherwise the block will be invalid.
-    ) { //NOW WE KEEP TRACK OF ABOVE PROPERTIES BY USING THIS. STATEMENT. (SUMMARY: means, we cloned them for a reuse!)
+    ) { //NOW WE KEEP TRACK OF ABOVE PROPERTIES BY USING this. STATEMENT. (SUMMARY: means, we cloned them for a reuse!)
         this.index = index;
         this.timeStamp = timeStamp;
         this.data = data;
