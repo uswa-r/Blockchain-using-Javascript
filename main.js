@@ -5,7 +5,7 @@
 //BELOW WE ARE IMPORTING SHA256 LIBRARY:
 const SHA256 = require('crypto-js/sha256');
 ///////////////////////////////////////////
-//CLASS block STARTS FROM HERE AND IT'LL INCLUDE THE CALCULATION OF BLOCK/GENESIS-BOCK/1ST-BLOCK AS WELL:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+//CLASS block STARTS FROM HERE AND IT'LL INCLUDE THE CALCULATION OF GENESIS-BOCK/1ST-BLOCK AS WELL:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 class block { //WE'LL BEGIN BY MAKING A CLASS OF BLOCK:
     constructor( //IN A CONSTRUCTOR, WE'RE ADDING THE PROPERTIES OF A BLOCK WE NEED TO MAKE A BLOCKCHAIN:
         index, //index tells where the block sits on the chain: means its position on the chain. 
