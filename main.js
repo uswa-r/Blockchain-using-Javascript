@@ -64,7 +64,7 @@ class blockChain { //we'll here again give it a constructor:
 //NOW TO TEST ALL THE CODE WE WROTE ABOVE, WE'LL CREATE AN 'INSTANCE' OF OUR BLOCKCHAIN:
 //DEFINITION: An instance is an object containing data and behavior described by the class.
 let uswaSBlockChain = new newBlockChain(); //here we made a variable and named it newBlockChain.
-uswaSBlockChain.addBlock(new block(1, "02/01/2022", "Account User: Uswa R. Balance: 2 Dodge Coins", {amount: 5})); //now here we're giving the new block its details/info/data (index, timeStamp, previousHash, & data)
-uswaSBlockChain.addBlock(new block(2, "03/01/2022", "Account User: Uswa R. Balance: 3 Dodge Coins", {amount: 15})); //now here we're giving the new block its details/info/data (index, timeStamp, previousHash, & data)
+uswaSBlockChain.addBlock(new block(1, "02/01/2022", {amount: 5})); //now here we're giving the new block its details/info/data (index, timeStamp, previousHash, & data)
+uswaSBlockChain.addBlock(new block(2, "03/01/2022", {amount: 15})); //now here we're giving the new block its details/info/data (index, timeStamp, previousHash, & data)
 
 console.log(JSON.stringify(uswaSBlockChain, null, 4));
