@@ -32,7 +32,7 @@ class block { //WE'LL BEGIN BY MAKING A CLASS OF BLOCK:
 }
 //CLASS block ENDS HERE AND CALCULATION SECTIONS AS WELL! //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-//2ND CLASS FOR BLOCKCHAIN HAT WILL START THE CHAIN SYSTEM BY CREATING NEW BLOCKS, STARTS FROM HERE:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+//2ND CLASS FOR BLOCKCHAIN THAT WILL START THE CHAIN SYSTEM BY CREATING NEW BLOCKS, STARTS FROM HERE:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 //NOW WE'RE CREATING A CLASS FOR BLOCKCHAIN:
 class blockChain { //we'll here again give it a constructor:
     constructor() { //this constructor will be responsible for initializing our blockchain, hence we'll give a property "chain" in this class which will be an array of blocks.
@@ -58,13 +58,19 @@ class blockChain { //we'll here again give it a constructor:
         newBlock.hash = newBlock.calculateHash(); //now, we told the addBlock method after declaring that it'll need to generate a new unique hash ID from previous hash, and then it has to re-calculate it from calculateHash() method, which is our hash calculator. 
         this.chain.push(newBlock); //now we're pushing the re-calculated block with a new unique hash ID to the chain, with the help of .push.  
     }
+    //2ND CLASS OF BLOCKCHAIN ENDS RIGHT HERE__________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
 }
-
 
 //NOW TO TEST ALL THE CODE WE WROTE ABOVE, WE'LL CREATE AN 'INSTANCE' OF OUR BLOCKCHAIN:
 //DEFINITION: An instance is an object containing data and behavior described by the class.
+//We are making new block here that are driving from the genesis block.
 let uswaSBlockChain = new blockChain(); //here we made a variable and named it uswaSBlockChain.
 uswaSBlockChain.addBlock(new block(1, "02/01/2022", {amount: 5})); //now here we're giving the new block its details/info/data (index, timeStamp, previousHash, & data)
 uswaSBlockChain.addBlock(new block(2, "03/01/2022", {amount: 15})); //now here we're giving the new block its details/info/data (index, timeStamp, previousHash, & data)
+//FORMATION OF NEW BLOCK IN THE BLOCKCHAIN ENDS HERE.
+//_____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+console.log(uswaSBlockChain); //here we run it without JSON.Stringify to see in actual blockchain logic and visualization.
 
-console.log(JSON.stringify(uswaSBlockChain, null, 4));
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//WE HAVE SUCCESSFULLY CREATED A BLOCKCHAIN!
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
