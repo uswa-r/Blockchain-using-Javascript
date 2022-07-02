@@ -31,6 +31,8 @@ class block { //WE'LL BEGIN BY MAKING A CLASS OF BLOCK:
     }
 }
 //CLASS block ENDS HERE AND CALCULATION SECTIONS AS WELL! //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//2ND CLASS FOR BLOCKCHAIN HAT WILL START THE CHAIN SYSTEM BY CREATING NEW BLOCKS, STARTS FROM HERE:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 //NOW WE'RE CREATING A CLASS FOR BLOCKCHAIN:
 class blockChain { //we'll here again give it a constructor:
     constructor() { //this constructor will be responsible for initializing our blockchain, hence we'll give a property "chain" in this class which will be an array of blocks.
@@ -41,5 +43,16 @@ class blockChain { //we'll here again give it a constructor:
         //we're gonna make new block in the block chain from the 1st block we created at Ln9 which is known as the Genesis Block.
         return new block(0, "01/01/2022", "Account User: Uswa R. Balance: 1 Dodge Coin", "0"); //it is the new block that 1st block "Genesis" will create in the blockchain. It contains property variables like index = 0, date (timeStamp) = 01/01/2022, data = could be anything, & previousHash = which doesn't exist hence could be any random number/data.
         //AFTER ABOVE CODE LINE OR DECLARATION OF INPUT IN THE PARAMETERS, WE'LL HEAD UPWARDS TO OUR CONSTRUCTOR OF BLOCKCHAIN WHERE WE MADE A PROPERTY CALLED CHAIN, AND WE'LL DECLARE OUR ITS BELOW createGenesisBlock function/method, SO IT CAN HAVE THE DATA WE PROVIDED IN ITS ARRAY. 
+    }
+    //BELOW METHOD/FUNC WILL BE USEFUL FOR FUTURE:
+    //getLatestBlock method will return the latest chain, hence we're giving this.chain property below:
+    getLatestBlock(){
+        return this.chain[this.chain.length -1]; //to return its last element, we've used .length here with -1, to get it from 1 rather than 0.
+    }
+    //-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    //addBlock method will receive a new block:
+    addBlock(newBlock){
+        //now the addBlock method will generate new blocks but it'll require the previousHash to get data from, hence we're using previousHash below to continue the formation of blockchain:
+        newBlock.previousHash = this.getLatestBlock().hash; //since new/latest block formation requires previous block's data, hence we used previousHash but to put this previous hash-data into latest/new block we have to use latestBlock method, and .hash to tell our method that we need a new hash ID formation not the whole data.
     }
 }
