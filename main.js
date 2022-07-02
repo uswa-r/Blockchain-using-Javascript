@@ -18,10 +18,10 @@ class block { //WE'LL BEGIN BY MAKING A CLASS OF BLOCK:
         this.data = data;
         this.previousHash = previousHash;
         this.hash = this.calculateHash(); //hash will contain the hash of our block, and will need to be calculated, hence we'll be needing a way to calculate it.
-        //above this.hash func is equals to this.calculateHash() so, the hash of the properties of the block can be calculated by the method/func on the Ln21 func section.  
+        //above this.hash func is equals to this.calculateHash() so, the hash of the properties of the block can be calculated by the method/func on the Ln26 func section.  
     }
     //NOW WE'RE MAKING A METHOD/FUNC THAT WILL CALCULATE THE HASH OF THE BLOCK:
-    //SUMMARY: means, it'll calculate the hash func, for that we'll need the properties (tracked/cloned properties, we made for reuse) of the bloc, and then it'll generate a new Hash (unique ID) for the block.
+    //SUMMARY: means, it'll calculate the hash func, for that we'll need the properties (tracked/cloned properties, we made for reuse) of the block, and then it'll generate a new Hash (unique ID) for the block.
     //BEFORE CALCULATING, WE'LL NEED HASH FUNC/HASH-NUMBER, THAT WILL BE PROVIDED BY A LIBRARY CALLED crypto-js (npm). WE'LL INSTALL IT IN OUR CODE THROUGH TERMINAL TO GET THOSE HASH FUNCS.
     calculateHash() {
         //now we'll return here the sha256 hash of our properties:
