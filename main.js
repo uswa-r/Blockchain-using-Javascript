@@ -32,7 +32,7 @@ class block { //WE'LL BEGIN BY MAKING A CLASS OF BLOCK:
 }
 //CLASS block ENDS HERE AND CALCULATION SECTIONS AS WELL! //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-//2ND CLASS FOR BLOCKCHAIN THAT WILL START THE CHAIN SYSTEM BY CREATING NEW BLOCKS, STARTS FROM HERE::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+//2ND CLASS FOR BLOCKCHAIN THAT WILL START THE CHAIN-FORMING-SYSTEM BY CREATING NEW BLOCKS, STARTS FROM HERE::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 //NOW WE'RE CREATING A CLASS FOR BLOCKCHAIN:
 class blockChain { //we'll here again give it a constructor:
     constructor() { //this constructor will be responsible for initializing our blockchain, hence we'll give a property "chain" in this class which will be an array of blocks.
