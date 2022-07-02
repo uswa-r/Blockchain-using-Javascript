@@ -1,7 +1,12 @@
+/////////////////////////////////////////////
+//CREATION OF A BLOCKCHAIN
+////////////////////////////////////////////
+
 //BELOW WE ARE IMPORTING SHA256 LIBRARY:
 const SHA256 = require('crypto-js/sha256');
-//CREATION OF A BLOCKCHAIN
-class Block { //WE'LL BEGIN BY MAKING A CLASS OF BLOCK:
+///////////////////////////////////////////
+
+class block { //WE'LL BEGIN BY MAKING A CLASS OF BLOCK:
     constructor( //IN A CONSTRUCTOR, WE'RE ADDING THE PROPERTIES OF A BLOCK WE NEED TO MAKE A BLOCKCHAIN:
         index, //index tells where the block sits on the chain: means its position on the chain. 
         timeStamp, //timeStamp tell the time when the block was created: means its date of creation.
@@ -23,5 +28,17 @@ class Block { //WE'LL BEGIN BY MAKING A CLASS OF BLOCK:
         //this.index + this.SoOn declares that this info/parameters are passing to the hash function & calculateHash function for the calculation. 
         return SHA256(this.index + this.timeStamp + this.previousHash + JSON.stringify(this.data)).toString(); //to make it look good like a database, we have used JSON.stringify, it'll make the data property look good like its in an array. and .toString will take the output of the sha256, and will cast it to a string, otherwise we'll get an object from the library we're using.
         //AFTER ABOVE CODE LINE, WE'LL GO BACK TO OUR HASH FUNCTION WE WROTE IN THE CONSTRUCTOR WITH NO PARAMETER. WE'LL DECLARE IT THIS CALC METHOD SO IT CAN GENERATE THE HASH NO.
+    }
+}
+//NOW WE'RE CREATING A CLASS FOR BLOCKCHAIN:
+class blockChain { //we'll here again give it a constructor:
+    constructor() { //this constructor will be responsible for initializing our blockchain, hence we'll give a property "chain" in this class which will be an array of blocks.
+        this.chain = [];
+        //NOW THE 1ST BLOCK ON THE BLOCKCHAIN IS CALLED A GENESIS BLOCK, WHICH WE'LL BE CREATING MANUALLY, HENCE WE'LL MAKE ANOTHER METHOD FOR IT, IN THIS CLASS, OUTSIDE OF THIS CONSTRUCTOR:
+    }
+    createGenesisBlock(){//Genesis block will return new block:
+        //we're gonna make new block in the block chain from the 1st block we created at Ln9 which is known as the Genesis Block.
+        return new block(0, "01/01/2022", "Account User: Uswa R. Balance: 1 Dodge Coin"); //it is the new block that 1st block "Genesis" will create in the blockchain. It contains property variables like index = 0, date = 01/01/2022
+
     }
 }
