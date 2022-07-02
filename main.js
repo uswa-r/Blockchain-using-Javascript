@@ -1,5 +1,6 @@
 /////////////////////////////////////////////
 //CREATION OF A BLOCKCHAIN
+//SIMPLE DEFINITION OF BLOCKCHAIN: A distributed database that maintains a continuously growing list of ordered records.
 ////////////////////////////////////////////
 
 //BELOW WE ARE IMPORTING SHA256 LIBRARY:
