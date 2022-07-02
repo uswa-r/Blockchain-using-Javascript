@@ -12,7 +12,8 @@ class Block { //WE'LL BEGIN BY MAKING A CLASS OF BLOCK:
         this.timeStamp = timeStamp;
         this.data = data;
         this.previousHash = previousHash;
-        this.hash = ''; //hash will contain the hash of our block, and will need to be calculated, hence we'll be needing a way to calculate it.
+        this.hash = this.calculateHash(); //hash will contain the hash of our block, and will need to be calculated, hence we'll be needing a way to calculate it.
+        //above this.hash func is equals to this.calculateHash() so, the hash of the properties of the block can be calculated by the method/func on the Ln21 func section.  
     }
     //NOW WE'RE MAKING A METHOD/FUNC THAT WILL CALCULATE THE HASH OF THE BLOCK:
     //SUMMARY: means, it'll calculate the hash func, for that we'll need the properties (tracked/cloned properties, we made for reuse) of the bloc, and then it'll generate a new Hash (unique ID) for the block.
@@ -20,5 +21,6 @@ class Block { //WE'LL BEGIN BY MAKING A CLASS OF BLOCK:
     calculateHash() {
         //now we'll return here the sha256 hash of our properties:
         return SHA256(this.index + this.timeStamp + this.previousHash + JSON.stringify(this.data)).toString(); //to make it look good like a database, we have used JSON.stringify, it'll make the data property look good like its in an array. and .toString will take the output of the sha256, and will cast it to a string, otherwise we'll get an object from the library we're using.
+        //AFTER ABOVE CODE LINE, WE'LL GO BACK TO OUR HASH FUNCTION WE WROTE IN THE CONSTRUCTOR WITH NO PARAMETER. WE'LL DECLARE IT THIS CALC METHOD SO IT CAN GENERATE THE HASH NO.
     }
 }
