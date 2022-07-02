@@ -3,11 +3,12 @@
 //SIMPLE DEFINITION OF BLOCKCHAIN: A distributed database that maintains a continuously growing list of ordered records.
 ////////////////////////////////////////////
 
-
-//"The block needs to be hashed to keep the integrity of the data. 
-//A SHA-256 is taken over the content of the block. 
-//It should be noted that this hash has nothing to do with “mining”, 
-//since there is no Proof Of Work problem to solve."
+////////////////////////////////////////////////////////////////////////////////////////////
+//"The block needs to be hashed to keep the integrity of the data.     /////////////////////
+//A SHA-256 is taken over the content of the block.                    /////////////////////
+//It should be noted that this hash has nothing to do with “mining”,   /////////////////////
+//since there is no Proof Of Work problem to solve."                   /////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////
 
 //BELOW WE ARE IMPORTING SHA256 LIBRARY:
 const SHA256 = require('crypto-js/sha256');
