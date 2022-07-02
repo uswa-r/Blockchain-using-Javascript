@@ -39,19 +39,19 @@ class blockChain { //we'll here again give it a constructor:
         this.chain = [this.createGenesisBlock()]; //after providing info in the below createGenesisBlock we declared that func on Ln39 in this.chain property, hence it could have the info to put into set of arrays.
         //NOW THE 1ST BLOCK ON THE BLOCKCHAIN IS CALLED A GENESIS BLOCK, WHICH WE'LL BE CREATING MANUALLY, HENCE WE'LL MAKE ANOTHER METHOD FOR IT, IN THIS CLASS, OUTSIDE OF THIS CONSTRUCTOR:
     }
-    createGenesisBlock(){//Genesis block will return new block:
+    createGenesisBlock() { //Genesis block will return new block:
         //we're gonna make new block in the block chain from the 1st block we created at Ln9 which is known as the Genesis Block.
         return new block(0, "01/01/2022", "Account User: Uswa R. Balance: 1 Dodge Coin", "0"); //it is the new block that 1st block "Genesis" will create in the blockchain. It contains property variables like index = 0, date (timeStamp) = 01/01/2022, data = could be anything, & previousHash = which doesn't exist hence could be any random number/data.
         //AFTER ABOVE CODE LINE OR DECLARATION OF INPUT IN THE PARAMETERS, WE'LL HEAD UPWARDS TO OUR CONSTRUCTOR OF BLOCKCHAIN WHERE WE MADE A PROPERTY CALLED CHAIN, AND WE'LL DECLARE OUR ITS BELOW createGenesisBlock function/method, SO IT CAN HAVE THE DATA WE PROVIDED IN ITS ARRAY. 
     }
     //BELOW METHOD/FUNC WILL BE USEFUL FOR FUTURE:
     //getLatestBlock method will return the latest chain, hence we're giving this.chain property below:
-    getLatestBlock(){
-        return this.chain[this.chain.length -1]; //to return its last element, we've used .length here with -1.
+    getLatestBlock() {
+        return this.chain[this.chain.length - 1]; //to return its last element, we've used .length here with -1.
     }
     //-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     //addBlock method will receive a new block:
-    addBlock(newBlock){
+    addBlock(newBlock) {
         //now the addBlock method will generate new blocks but it'll require the previousHash to get data from, hence we're using previousHash below to continue the formation of blockchain:
         newBlock.previousHash = this.getLatestBlock().hash; //since new/latest block formation requires previous block's data, hence we used previousHash but to put this previous hash-data into latest/new block we have to use latestBlock method, and .hash to tell our method that we need a new hash ID formation not the whole data.
         //now below, to re-calculate the hash to get a new hash unique ID for our latest/new block, for in-case, if any property from our 1st-block/genesis-block or class block at Ln9 (from constructor properties, not reusable properties), will be changed or tampered then, new block's ID will be new and unique.
@@ -65,8 +65,12 @@ class blockChain { //we'll here again give it a constructor:
 //DEFINITION: An instance is an object containing data and behavior described by the class.
 //We are making new block here that are driving from the genesis block.
 let uswaSBlockChain = new blockChain(); //here we made a variable and named it uswaSBlockChain.
-uswaSBlockChain.addBlock(new block(1, "02/01/2022", {amount: 5})); //now here we're giving the new block its details/info/data (index, timeStamp, previousHash, & data)
-uswaSBlockChain.addBlock(new block(2, "03/01/2022", {amount: 15})); //now here we're giving the new block its details/info/data (index, timeStamp, previousHash, & data)
+uswaSBlockChain.addBlock(new block(1, "02/01/2022", {
+    amount: 5
+})); //now here we're giving the new block its details/info/data (index, timeStamp, previousHash, & data)
+uswaSBlockChain.addBlock(new block(2, "03/01/2022", {
+    amount: 15
+})); //now here we're giving the new block its details/info/data (index, timeStamp, previousHash, & data)
 //FORMATION OF NEW BLOCK IN THE BLOCKCHAIN ENDS HERE.
 //_____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
 console.log(uswaSBlockChain); //here we run it without JSON.Stringify to see in actual blockchain logic and visualization.
