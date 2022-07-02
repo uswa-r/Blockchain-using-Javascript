@@ -27,12 +27,12 @@ class block { //WE'LL BEGIN BY MAKING A CLASS OF BLOCK:
         //now we'll return/declare here the sha256 hash of our properties:
         //this.index + this.SoOn declares that this info/parameters are passing to the hash function(20) & calculateHash(Ln26) function for the calculation. 
         return SHA256(this.index + this.timeStamp + this.previousHash + JSON.stringify(this.data)).toString(); //to make it look good like a database, we have used JSON.stringify, it'll make the data property look good like its in an array. and .toString will take the output of the sha256, and will cast it to a string, otherwise we'll get an object from the library we're using.
-        //AFTER ABOVE CODE LINE, WE'LL GO BACK TO OUR HASH FUNCTION WE WROTE IN THE CONSTRUCTOR WITH NO PARAMETER. WE'LL DECLARE IT THIS CALC METHOD SO IT CAN GENERATE THE HASH NO.
+        //AFTER ABOVE CODE LINE, WE'LL GO BACK TO OUR HASH FUNCTION(Ln20) WE WROTE IN THE CONSTRUCTOR WITH NO PARAMETER. WE'LL DECLARE IT THIS CALC METHOD(26) SO IT CAN GENERATE THE HASH NO.
     }
 }
 //CLASS block ENDS HERE AND CALCULATION SECTIONS AS WELL! //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-//2ND CLASS FOR BLOCKCHAIN THAT WILL START THE CHAIN SYSTEM BY CREATING NEW BLOCKS, STARTS FROM HERE:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+//2ND CLASS FOR BLOCKCHAIN THAT WILL START THE CHAIN SYSTEM BY CREATING NEW BLOCKS, STARTS FROM HERE::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 //NOW WE'RE CREATING A CLASS FOR BLOCKCHAIN:
 class blockChain { //we'll here again give it a constructor:
     constructor() { //this constructor will be responsible for initializing our blockchain, hence we'll give a property "chain" in this class which will be an array of blocks.
