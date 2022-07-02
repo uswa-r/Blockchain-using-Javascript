@@ -54,5 +54,7 @@ class blockChain { //we'll here again give it a constructor:
     addBlock(newBlock){
         //now the addBlock method will generate new blocks but it'll require the previousHash to get data from, hence we're using previousHash below to continue the formation of blockchain:
         newBlock.previousHash = this.getLatestBlock().hash; //since new/latest block formation requires previous block's data, hence we used previousHash but to put this previous hash-data into latest/new block we have to use latestBlock method, and .hash to tell our method that we need a new hash ID formation not the whole data.
+        //now below, to re-calculate the hash to get a new hash unique ID for our latest/new block, for in-case, if any property from our 1st-block/genesis-block or class block at Ln9 (from constructor properties, not reusable properties), will be changed or tampered then, new block's ID will be new and unique.
+        newBlock.hash = newBlock.calculateHash(); //now, we told the addBlock method after declaring that it'll need to generate a new unique hash ID from previous hash, and then it has to re-calculate it from calculateHash() method, which is our hash calculator. 
     }
 }
